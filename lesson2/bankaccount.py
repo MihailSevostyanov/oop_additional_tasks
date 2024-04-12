@@ -15,25 +15,24 @@ class BankAccount:
 
 
     def __init__(self, balance):
-        self.balance = balance
+        self.__balance = balance
 
-
+    @property
     def balance(self):
-        return self.balance
+        return self.__balance
 
 
     def deposit(self, amount):
-        self.balance += amount
-        # return self.balance
+        self.__balance += int(amount)
 
 
     def withdraw(self, amount):
-        self.balance -= amount
+        self.__balance -= amount
 
 
     def close(self):
-        self.balance *= 0
-        # return self.balance
+        self.__balance = 0
+
 
 
 
